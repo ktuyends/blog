@@ -1,0 +1,15 @@
+---
+title: "Presentation Ninja"
+subtitle: ""
+author: "Tuyen mfe"
+institute: ""
+date: "2019/11/20"
+output:
+  xaringan::moon_reader:
+    css: ["default", "style.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---

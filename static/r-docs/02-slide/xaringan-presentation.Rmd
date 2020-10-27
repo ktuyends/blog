@@ -1,0 +1,204 @@
+---
+title: "Presentation Ninja"
+subtitle: ""
+author: "Tuyen mfe"
+institute: ""
+date: "2019/11/20"
+output:
+  xaringan::moon_reader:
+    css: ["default", "style.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+???
+
+Ảnh nền
+
+---
+class: inverse, center, middle
+
+# Footnote
+
+---
+
+background-image: url(`r xaringan:::karl`)
+background-position: 50% 50%
+background-size: cover;
+class: center, bottom, inverse
+
+# You only live once!
+
+---
+
+# Footnote
+
+Để trình bày Footnote<sup>1</sup> chúng ta sử dụng cú pháp:
+
+```{}
+Text<sup>number_footnote</sup>
+
+...
+content
+...
+
+.footnote[
+[1] Đây là Footnote 1
+[2] Đây là Footenote 2
+]
+```
+
+.footnote[
+[1] Đây là Footnote 1
+]
+
+---
+
+# Trình bày list
+
+- one item
+- one item
+- one item
+  - one more item
+  - one more item
+  - one more item
+
+Code:
+
+```yaml
+---
+title: "A Cool Presentation"
+output:
+  xaringan::moon_reader:
+    yolo: true
+    nature:
+      autoplay: 30000
+---
+```
+---
+
+# Nội dung xuất hiện từ từ
+
+- Tôi là ai mà yêu đời quá vậy.
+
+--
+
+- Tôi là ai mà lòng còn nghi ngại. Khi đớn đau đang cào cấu quanh mình.
+
+--
+
+- Tôi là ai mà trước ánh bình minh. Lòng cứ muốn tan đi trong sắc nắng.
+
+--
+
+- Tôi là ai uống giọt đời cay đắng, không phải men nồng nào cũng ngát hương. 
+
+--
+
+Định dạng:
+
+.left[One item]
+.center[One item]
+.right[One item]
+
+---
+
+class: inverse, center, middle
+
+# Hai cột
+
+---
+
+# Ví dụ về hai column
+
+.pull-left[
+1. One item
+2. One item
+3. One item
+]
+
+.pull-right[
+- One item
+- One item
+- Ome item
+]
+
+---
+
+# Math expression
+
+You can write LaTeX math expressions inside a pair of dollar signs, e.g. `$\alpha+\beta$` renders $\alpha+\beta$. You can use the display style with double dollar signs:
+
+```{}
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+```
+
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+
+---
+
+# R Code
+
+```{r}
+# a boring regression
+fit = lm(dist ~ 1 + speed, data = cars)
+coef(summary(fit))
+```
+
+---
+
+# Table
+
+If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
+
+```{r}
+knitr::kable(head(iris), format = 'html')
+```
+
+---
+
+```{r eval=require('DT'), tidy=FALSE}
+DT::datatable(
+  head(iris, 10),
+  fillContainer = FALSE, options = list(pageLength = 8)
+)
+```
+
+---
+
+# Highlight Lines
+
+- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or have trailing comments `#<<`;
+
+```yaml
+output:
+  xaringan::moon_reader:
+    nature:
+      highlightLines: true
+```
+
+Example:
+
+```{r eval=FALSE, tidy=FALSE}
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #<<
+  geom_smooth()    #<<
+```
+
+---
+
+```{r, highlight.output=c(1, 3), echo=FALSE}
+head(iris)
+```
+
+---
+class: center, middle
+
+# Thanks!

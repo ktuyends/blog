@@ -1,0 +1,127 @@
+// Highlight.js custom theme
+// Follow guidelines
+// 1. Uncomment the block just below - remove `/*` and `*/`
+// 2. Fill `background`, `color`, `border-right-color` properties
+// with properties of `.hljs` CSS class of your theme
+// 3. Put your theme where it's indicated just below
+// 4. Remove `.hljs {...}` rules
+// 5. Remove `hljs-` of all CSS class name. E.g : `.hljs-comment` becomes `.comment`
+// 6. Comment line 61 (`'themes/tranquilpeak',`) of `source/_css/tranquilpeak.scss` file
+// 7. Run `grunt buildProd` to build the theme and see the result
+
+// Default code block
+pre > code {
+    background: #3f3f3f;
+    color: #dcdcdc;
+}
+
+// allow for horizontal scrolling of code blocks
+pre > code.codeblock {
+  overflow-x: auto;
+}
+
+// Default inline code
+code {
+  background-color: #f7f7f7;
+}
+
+// Tabbed code block tab
+// If your theme is dark then use a lighter background
+// to see clearly which tab is active
+.codeblock--tabbed figcaption .tab.active {
+    background: #3f3f3f;
+    color: #dcdcdc;
+}
+
+// highlight code block
+figure.highlight,
+.codeblock {
+    background: #3f3f3f;
+    color: #dcdcdc;
+
+    figcaption {
+        background: #3f3f3f;
+        color: #dcdcdc;
+    }
+    .gutter {
+        background: #3f3f3f;
+        border-right-color: #3f3f3f;
+        .line {
+            color: #dcdcdc;
+        }
+    }
+
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+.keyword,
+.selector-tag,
+.tag {
+  color: #e3ceab;
+}
+
+.template-tag {
+  color: #dcdcdc;
+}
+
+.number {
+  color: #8cd0d3;
+}
+
+.variable,
+.template-variable,
+.attribute {
+  color: #efdcbc;
+}
+
+.literal {
+  color: #efefaf;
+}
+
+.subst {
+  color: #8f8f8f;
+}
+
+.title,
+.name,
+.selector-id,
+.selector-class,
+.section,
+.type {
+  color: #efef8f;
+}
+
+.symbol,
+.bullet,
+.link {
+  color: #dca3a3;
+}
+
+.deletion,
+.string,
+.built_in,
+.builtin-name {
+  color: #cc9393;
+}
+
+.addition,
+.comment,
+.quote,
+.meta {
+  color: #7f9f7f;
+}
+
+
+.emphasis {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+}

@@ -1,0 +1,30 @@
+book_filename: "foundations-of-data-science"
+output_dir: docs
+repo: https://github.com/ktuyends/foundations-of-data-science/
+delete_merged_file: true
+new_session: yes
+language:
+  label:
+    fig: 'Figure '
+    tab: 'Table '
+    eq: 'Equation '
+    thm: 'Theorem '
+    lem: 'Lemma '
+    def: 'Definition '
+    cor: 'Corollary '
+    prp: 'Proposition '
+    exm: 'Example '
+    exr: 'Exercise '
+    proof: 'Proof. '
+    remark: 'Remark. '
+    solution: 'Solution. '
+  ui:
+    edit: "Edit"
+    chapter_name: "Chapter "
+
+rmd_files: [
+  "index.rmd",
+  
+  "references.Rmd",
+]
+

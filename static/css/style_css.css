@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Roboto:300,300i,400,400i,700,700i&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese');
+
+body {
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6, html{
+  /*font-family: "Open Sans", Helvetica, Arial, sans-serif, Lora, serif;*/
+  font-family: 'Helvetica', sans-serif;
+}
+
+a.category-link {
+  color: #39739d !important;
+  background-color: #E1ECF4;
+  border-color: transparent;
+  padding: 0.15em 0.8em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.2em 1.5em;
+}
+
+.postShorten .postShorten-excerpt {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+	color: #4c4c4c;
+}
+
+.post .post-content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #4c4c4c;
+}
+
+.post .post-content :not(blockquote):not(.alert)>p {
+    margin: 1.0em 0 0 0;
+}
+
+.post-content {
+    font-size: 1.9rem;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	color: #4c4c4c;
+}	
+
+hr {
+    margin: 0.5em 0 0.5em;
+}
+
+a, a:active, a:hover, a:visited {
+    cursor: pointer;
+    color: #c05b4d;
+    text-decoration: none;
+}
+
+#TOC:before {
+    content: "Table of Contents";
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+	line-height: 2.1em;
+	color: #4a4a4a;
+    margin: 1em 0 1em 0;
+}
+
+#TOC {
+    border-bottom: 1px solid #4c4c4c;
+    margin-bottom: 1em;
+}
+
+.post-actions-wrap {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eef2f8;
+}
+
+.post .post-footer {
+    margin-top: 2px;
+}
+

@@ -1,0 +1,23 @@
+---
+title: "R Markdown Tutorial"
+date: "`r Sys.Date()`"
+author: Tuyen mfe
+bibliography: [book.bib, packages.bib]
+biblio-style: "apalike"
+link-citations: yes
+output:
+  rmdformats::readthedown:
+    highlight: zenburn
+#    code_folding: hide
+    use_bookdown: true
+    fig_caption: true
+    number_sections: true    
+    css: style.css
+---
+
+# References
+
+```{r include=FALSE}
+knitr::write_bib(c("rmarkdown","bookdown","rmdformats","xaringan"), 'packages.bib')
+```
+
