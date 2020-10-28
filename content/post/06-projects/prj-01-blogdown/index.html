@@ -19,11 +19,249 @@ output:
     toc: TRUE
 description: "Mini Project"
 summary: >
-   Sao không được ta!
+   Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,...
 ---
 
 <link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
 <script src="index_files/anchor-sections/anchor-sections.js"></script>
 
+<div id="TOC">
+<ul>
+<li><a href="#chuẩn-bị">1. Chuẩn bị</a></li>
+<li><a href="#tạo-blog-cơ-bản">2. Tạo blog cơ bản</a><ul>
+<li><a href="#tạo-blog">2.1. Tạo blog</a></li>
+<li><a href="#cấu-trúc-thư-mục-của-hugo">2.2. Cấu trúc thư mục của Hugo</a></li>
+<li><a href="#build-website-ở-local">2.3. Build website ở local</a></li>
+</ul></li>
+<li><a href="#tùy-chỉnh-blog">3. Tùy chỉnh blog</a><ul>
+<li><a href="#edit-file-config.toml">3.1. Edit file Config.toml</a></li>
+<li><a href="#html-tag">3.2. HTML Tag</a></li>
+<li><a href="#mathjax">3.3. Mathjax</a></li>
+<li><a href="#utterances-comments">3.4. Utterances comments</a></li>
+<li><a href="#frontpage">3.5. Frontpage</a></li>
+<li><a href="#install-grunt">3.6. Install grunt</a></li>
+<li><a href="#font">3.7. Font</a></li>
+<li><a href="#highlightjs">3.8. Highlightjs</a></li>
+<li><a href="#css">3.9. CSS</a></li>
+</ul></li>
+<li><a href="#deploy-blog">4. Deploy blog</a></li>
+<li><a href="#viết-bài-và-cập-nhật">5. Viết bài và cập nhật</a></li>
+<li><a href="#summary">6. Summary</a></li>
+</ul>
+</div>
 
+<p>Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,…nhưng tôi không thực sự hài lòng cho lắm với những yêu cầu của mình.</p>
+<p>Rồi, có một ngày, tôi vô tình đọc được ở đâu đó, một bài viết giới thiệu về Hugo. Lúc đó, tôi không thể diễn tả được cảm xúc của mình nữa. Thứ tôi muốn tìm đây rồi, Oh my God!</p>
+<p>Lúc đầu, tôi lập blog này chủ yếu là vì sở thích viết lách một thời. Khi đó, Blogdown (một package trong R, hỗ trợ tạo blog dựa trên nền tảng Hugo) còn chưa xuất hiện. Các bài viết mang nội dung về Programming, Data analytics khá là khó thực hiện, nhất là cái bài viết sử dụng ngôn ngữ R.</p>
+<p>Sau này, đến gần cuối năm 2017, với sự ra đời của Blogdown và xu hướng <em>Reproducible Research</em>. Những nhược điểm trên về cơ bản là đã có phương pháp giải quyết. Và tôi đã xây dựng được một Blog khá là hài lòng. Cho đến khi…Vào một ngày đẹp trời, tôi chuyển đổi laptop, Github được update lại cơ chế, <code>R</code> nâng cấp lên <code>4.0.3</code>, Hugo cũng thay đổi phiên bản. Thế là, một đống lỗi tùm lum xuất hiện.</p>
+<p>Cuối cùng, tôi quyết định, xây dựng lại từ đầu, update mọi thứ lên phiên bản mới nhất. Prj này, tôi ghi lại quá trình mình xây dựng blog này.</p>
+<div id="chuẩn-bị" class="section level2">
+<h2>1. Chuẩn bị</h2>
+<p>Tôi chia phần chuẩn bị làm 3 loại (Mình sử dụng Windows 10, nên bài này áp dụng với Windows 10, các hệ điều hành khác về cơ bản là tương tự) :</p>
+<p><strong><em>Các phần mềm bắt buộc:</em></strong></p>
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+<li><a href="https://www.r-project.org/">R</a>, <a href="https://rstudio.com/">RStudio</a></li>
+<li><a href="https://github.com/rstudio/blogdown">Blogdown</a></li>
+<li><a href="https://git-scm.com/downloads">Git</a></li>
+</ul>
+<p><strong><em>Chuẩn bị themes:</em></strong></p>
+<p>Để tìm themes cho Hugo, các bạn vào trang <a href="https://themes.gohugo.io/">Hugo Themes</a>. Với Blog này, tôi sử dụng theme <a href="https://github.com/kakawait/hugo-tranquilpeak-theme">Hugo Tranquilpeak theme</a>.</p>
+<p><strong><em>Cài <a href="https://nodejs.org/en/">Node</a> để tùy chỉnh theme:</em></strong></p>
+<p>Với các themes khác, mình không xác định. Nhưng với theme <code>Hugo Tranquilpeak</code>, một số tùy chỉnh cần phải cài <code>Node</code>.</p>
+<p>Sau khi cài <code>Node js</code>, chạy lệnh sau để kiểm tra:</p>
+<pre class="bash"><code># Check version of Node
+node -v
 
+# Check version of npm
+npm -v</code></pre>
+<p>Sau khi chuẩn bị xong các nội dung trên, chúng ta bắt tay vào xây dựng Blog.</p>
+</div>
+<div id="tạo-blog-cơ-bản" class="section level2">
+<h2>2. Tạo blog cơ bản</h2>
+<div id="tạo-blog" class="section level3">
+<h3>2.1. Tạo blog</h3>
+<p>Trong RStudio, chúng ta tạo một blog mới như sau:</p>
+<p><code>File → New Project → New Directory → Website using Blogdown</code></p>
+<p align="center">
+<img src="/post/06-projects/prj-01-blogdown/new_blog_project.png" style="max-width:70%">
+</p>
+<p align="center">
+<img src="/post/06-projects/prj-01-blogdown/new_blog_ever.png" style="max-width:70%">
+</p>
+</div>
+<div id="cấu-trúc-thư-mục-của-hugo" class="section level3">
+<h3>2.2. Cấu trúc thư mục của Hugo</h3>
+<p>Về cơ bản, một blog được tạo ra bởi Hugo sẽ gồm các files và folders sau:</p>
+<pre class="bash"><code>├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes</code></pre>
+<p>Trong đó:</p>
+<ul>
+<li>config.toml: file cấu hình của blog.</li>
+<li>themes: Thư mục chứa theme của blog.</li>
+<li>content: thư mục chứa các bài viết, page.</li>
+<li>static: thư mục chứa các file, images, css, js,…</li>
+</ul>
+</div>
+<div id="build-website-ở-local" class="section level3">
+<h3>2.3. Build website ở local</h3>
+<p>Với Git, chúng ta sử dụng câu lệnh sau để build:</p>
+<pre class="bash"><code># Vào folder của Blog
+cd Blog-folder
+
+# Build tạm để xem kết quả
+hugo server
+
+# Build chính thực, Hugo sẽ tạo ra các file ở public/
+hugo</code></pre>
+<p>Các câu lệnh trên sẽ build các file <code>.md</code> để hiển thị. Với các file <code>.Rmd</code>, cách dễ nhất là sử dụng RStudio.</p>
+<p align="center">
+<img src="/post/06-projects/prj-01-blogdown/build.png" style="max-width:75%">
+</p>
+</div>
+</div>
+<div id="tùy-chỉnh-blog" class="section level2">
+<h2>3. Tùy chỉnh blog</h2>
+<p>Khi đã có một Blog về cơ bản như trên, nó sẽ ở hình dáng của thuở ban sơ và việc bạn cần phải làm là thêm vào các thành phần như menu, categories, tag,…</p>
+<p>Với mỗi theme, sẽ có những cách tùy chỉnh riêng. Nên các bạn phải đọc hướng dẫn trong các theme đó. Còn với theme <code>Hugo Tranquilpeak</code>, mình gợi ý một số bước tùy chỉnh sau:</p>
+<div id="edit-file-config.toml" class="section level3">
+<h3>3.1. Edit file Config.toml</h3>
+<p>Đây là file <code>config.toml</code> của blog này: <a href="https://github.com/ktuyends/Blog/blob/main/config.toml">link</a></p>
+</div>
+<div id="html-tag" class="section level3">
+<h3>3.2. HTML Tag</h3>
+<p>Với phiên bản mới của Hugo, các bài viết chèn <code>html tag</code> sẽ bị miss. Vì vậy cần thêm nội dung sau vào trong file <code>config.toml</code>:</p>
+<pre class="ini"><code>[markup]
+  defaultMarkdownHandler = &quot;blackfriday&quot;</code></pre>
+</div>
+<div id="mathjax" class="section level3">
+<h3>3.3. Mathjax</h3>
+<p>Nếu các bạn muốn gõ các công thức toán học trong Blog, thì theme của các bạn phải hỗ trợ các công cụ như Mathjax. Với blog này, mình tạo ra file <code>footer.html</code> trong <code>/layouts/partials/footer.html</code>: <a href="https://github.com/ktuyends/Blog/blob/main/layouts/partials/footer.html">link</a></p>
+</div>
+<div id="utterances-comments" class="section level3">
+<h3>3.4. Utterances comments</h3>
+<p>Về hệ thống comment, thì hầu hết các themes sẽ hỗ trợ <a href="https://disqus.com/">Disqus</a>. Nhưng tôi không thích Disqus vì nó chứa quảng cáo, và đôi khi là bị chặn, không vào được. Ngoài Disqus, thì cũng có khá là nhiều hệ thống <a href="https://gohugo.io/content-management/comments/">Comment</a> như: Commento, Staticman,…Tôi khá là thích Commento, nhưng việc build hơi khó với khả năng của tôi hiện tại.</p>
+<p>Sau này, nếu có thể tôi sẽ chuyển qua Commento. Còn bây giờ, tôi sử dụng <a href="https://utteranc.es/">Utterances</a>, một hệ thống Free comment dựa trên Github.</p>
+<p>Để cài đặt, tôi chỉnh sửa hai file sau:</p>
+<ul>
+<li>File 1 trong <code>/layouts/partials/post/comments.html</code>: <a href="Blog/layouts/partials/post/comments.html">link</a></li>
+<li>File 2 trong <code>/layouts/_default/single.html</code>: <a href="https://github.com/ktuyends/Blog/blob/main/layouts/_default/single.html">link</a></li>
+</ul>
+</div>
+<div id="frontpage" class="section level3">
+<h3>3.5. Frontpage</h3>
+<p>Theo mặc định, Frontpage trong Hugo sẽ hiển thị một list các bài viết của các bạn. Tuy nhiên, tôi lại không thích như vậy. Tôi thích đặt một bài viết cụ thể cho Frontpage, ở đó tôi có thể viết những gì tôi muốn người đọc khi vào blog của tôi có thể đọc được đầu tiên.</p>
+<p>Các bước thực hiện:</p>
+<ul>
+<li><strong>Bước 1</strong>: Tạo một file <code>_index.md</code> trong <code>content</code>. Nội dung của file này sẽ được hiển thị ở Frontpage.</li>
+<li><strong>Bước 2</strong>: Thay thế nội dung trong file <code>themes/tranquilpeak/layouts/index.html</code> bằng nội dung trong file <code>/layouts/_default/single.html</code></li>
+</ul>
+</div>
+<div id="install-grunt" class="section level3">
+<h3>3.6. Install grunt</h3>
+<p>Một số tùy chỉnh như font, highlight.js muốn thay đổi phải thực hiện build lại theme. Và một trong những yêu cầu khi build lại theme <code>Hugo Tranquilpeak</code> là cài đặt Grunt.</p>
+<pre class="bash"><code># Vào thư mục theme
+cd theme/tranquilpeak
+
+# Cài đặt grunt, yêu cầu cài node.js trước
+npm install grunt-cli -g
+npm install
+
+# Build theme
+npm run prod</code></pre>
+</div>
+<div id="font" class="section level3">
+<h3>3.7. Font</h3>
+<p>Để thay đổi Font chữ cho theme <code>Hugo Tranquilpeak</code>, có 4 bước như sau:</p>
+<p><strong>Bước 1</strong>: Thêm google font vào <a href="https://github.com/ktuyends/Blog/blob/main/themes/tranquilpeak/src/scss/utils/_fonts.scss">file</a> <code>themes/tranquilpeak/src/scss/utils/_fonts.scss</code></p>
+<p><strong>Bước 2</strong>: Chỉnh sửa font trong <a href="https://github.com/ktuyends/Blog/blob/main/themes/tranquilpeak/src/scss/utils/_variables.scss">file</a> <code>themes/tranquilpeak/src/scss/utils/_variables.scss</code></p>
+<p><strong>Bước 3</strong>: Edit font <a href="https://github.com/ktuyends/Blog/blob/main/themes/tranquilpeak/src/scss/utils/mixins/_sidebar.scss">sidebar</a> <code>themes/tranquilpeak/src/scss/utils/mixins/_sidebar.scss</code></p>
+<p><strong>Bước 4</strong>: Chạy <code>npm run prod</code> để build lại theme.</p>
+</div>
+<div id="highlightjs" class="section level3">
+<h3>3.8. Highlightjs</h3>
+<p>Với các Blog liên quan đến lập trình, Highlight code để cho nội dung code được hiển thị đẹp hơn là chuyện nên làm. <code>Highlight.js</code> và <code>Prism</code> là hai nền tảng thường được sử dụng. Với Blog này, tôi sử dụng <code>Highlight.js</code>.</p>
+<p>Tôi chia phần này làm 2 công việc. Đầu tiên, không phải ngôn ngữ nào cũng được theme hỗ trợ, vì vậy phải thêm ngôn ngữ đó vào theme.</p>
+<p><strong>Bước 1</strong>: Thêm nội dung sau vào file <code>config.toml</code></p>
+<pre class="ini"><code>customJS = [&quot;js/highlight.pack.js&quot;]</code></pre>
+<p><strong>Bước 2</strong>: Thêm <a href="https://github.com/ktuyends/Blog/blob/main/static/js/highlight.pack.js">file</a> <code>highlight.pack.js</code> download từ <a href="https://highlightjs.org/download/">Highlightjs</a> vào <code>static/js</code></p>
+<p>Sau khi thêm ngôn ngữ vào theme, bước cuối cùng là chỉnh sửa màu. Với bước này, tương tự như với chỉnh sửa font. Trong file download được ở trên, sẽ bao gồm các style, tôi chọn style là <code>zenburn</code> và làm theo hướng dẫn trong các file sau:</p>
+<p><strong>Bước 3</strong>: Edit <a href="https://github.com/ktuyends/Blog/blob/main/themes/tranquilpeak/src/scss/themes/_hljs-custom.scss">file</a> sau theo hướng dẫn <code>tranquilpeak/src/scss/themes/_hljs-custom.scss</code></p>
+<p><strong>Bước 4</strong>: Mở <a href="https://github.com/ktuyends/Blog/blob/main/themes/tranquilpeak/src/scss/tranquilpeak.scss">file</a> sau <code>tranquilpeak/src/scss/tranquilpeak.scss</code> và thực hiện comment như bên dưới:</p>
+<pre class="css"><code>@import
+//  &#39;themes/hljs-tranquilpeak&#39;,</code></pre>
+<p><strong>Bước 5</strong>: Chạy <code>npm run prod</code> để build lại theme.</p>
+</div>
+<div id="css" class="section level3">
+<h3>3.9. CSS</h3>
+<p>Một số định dạng, ta có thể sửa trực tiếp thông qua CSS.</p>
+<p>Đầu tiên, thêm dòng lệnh sau vào file <code>config.toml</code> để xác định đường dẫn đến file <code>css</code>:</p>
+<pre class="ini"><code>[[params.customCSS]]
+    href = &quot;css/style_css.css&quot;</code></pre>
+<p>Sau đó vào <code>static/css</code> tạo file <code>style_css.css</code>. Bây giờ các bạn có thể tùy chỉnh theo ý mình trong file này rồi. Còn đây là file tùy chỉnh của tôi: <a href="https://github.com/ktuyends/Blog/blob/main/static/css/style_css.css">style_css</a></p>
+</div>
+</div>
+<div id="deploy-blog" class="section level2">
+<h2>4. Deploy blog</h2>
+<p>Có nhiều cách để Deploy một blog. Tôi thì tôi chọn Github.</p>
+<p><strong>Bước 1</strong>: Tạo tài khoản <a href="https://github.com/">Github</a></p>
+<p><strong>Bước 2</strong>: Tạo hai remote repository</p>
+<ul>
+<li>Repository 1: Tên trang web: site-name</li>
+<li>Repository 2: github_id.github.io</li>
+</ul>
+<p><strong>Bước 3</strong>: Tạo local repository</p>
+<pre class="bash"><code># Xóa public và tạo liên kết
+rm -r public/
+
+# Git init
+git init
+
+# Commit
+git commit -m &quot;commit_msg&quot;
+
+# Add remote
+git branch -M main
+git remote add origin https://github.com/.../site-name.git
+
+# Add submodule
+git submodule add https://github.com/.../github_id.github.io.git public</code></pre>
+<p><strong>Bước 4</strong>: Push nội dung lên Github</p>
+<pre class="bash"><code># Push blog to blog
+git add .
+git commit -m &quot;commit_msg&quot;
+git push -u origin main
+
+# Push public to github_id.github.io
+cd public
+git add .
+git commit -m &quot;Commit_msg&quot;
+git push -u origin main</code></pre>
+</div>
+<div id="viết-bài-và-cập-nhật" class="section level2">
+<h2>5. Viết bài và cập nhật</h2>
+<p>Sau khi viết bài, hãy sử dụng công cụ <code>Build website</code> trong RStudio để build nếu có các file <code>.Rmd</code> mới, với các trường hợp khác có thể sử dụng trực tiếp câu lệnh <code>hugo</code> trong <code>Git</code>.</p>
+<pre class="bash"><code># Commit and push to blog
+git add .
+git commit -m &quot;Some message&quot;
+git push -u origin main
+
+# Build
+hugo
+
+# Commit and push to github_id.github.io
+cd public
+git add .
+git commit -m &quot;Build website&quot;
+git push -u origin main</code></pre>
+</div>
+<div id="summary" class="section level2">
+<h2>6. Summary</h2>
+<p>Như vậy, tôi đã trình bày xong các bước cơ bản để xây dựng một Blog sử dụng Blogdown, dựa trên nền tảng Hugo. Và thành quả chính là trang blog này đây :vv</p>
+<hr />
+</div>
