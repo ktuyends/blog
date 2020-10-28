@@ -9,7 +9,7 @@ showMeta: false
 
 <p style = "font-family:Lora; font-weight: 400"><i></i></p>
 
-<p style = "font-family:Lora; font-weight: 400"><i> Blog này mình lập ra chỉ có 2 mục đích chính. Một, là để được viết, mình thực sự rất thích viết vu vơ, không đầu, không cuối. Và hai, là để tổng hợp lại các kiến thức mình học được về Data science. Learn by writting!</i></p>
+<p style = "font-family:Lora; font-weight: 400"><i> Blog này mình lập ra chỉ có 2 mục đích chính. Một, là để được viết, mình thực sự rất thích viết vu vơ, không đầu, không cuối. Và hai, là để tổng hợp lại các kiến thức mình học được về Data science. Learn by writing!</i></p>
 
 <p style = "font-family:Lora; font-weight: 400"><i>Thank you for reading, I hope you enjoy my blog!</i></p>
 

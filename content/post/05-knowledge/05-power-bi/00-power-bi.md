@@ -13,6 +13,13 @@ clearReading: false
 comments: true
 description: "Power BI"
 summary: >
-  <p style = "font-family:Roboto; font-weight: 400"></p>
+  Power BI là một giải pháp phân tích kinh doanh cho phép bạn trực quan hóa dữ liệu (visualization) và chia sẻ những hiểu biết sâu sắc (insights) trong tổ chức...
 ---
 
+Power BI là một giải pháp phân tích kinh doanh cho phép bạn trực quan hóa dữ liệu (visualization) và chia sẻ những hiểu biết sâu sắc (insights) trong tổ chức của bạn, hoặc nhúng những báo cáo Dashboard này vào ứng dụng hoặc trang web của công ty bạn. 
+
+Từ đó giúp cho Ban điều hành và các nhà quản trị doanh nghiệp đưa ra những quyết định kinh doanh và quản lý hiệu quả và kịp thời. 
+
+Page này, tôi vừa học, vừa ghi chép lại những gì mình học được về Power BI.
+
+---
