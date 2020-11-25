@@ -19,8 +19,8 @@ summary: >
 
 Với quy trình Gitflow đã trình bày trong bài trước, về cơ bản tôi sẽ chia quá trình học Git làm hai phần:
 
-- Phần 1: Làm việc ở local
-- Phần 2: Làm việc với remote
+- Phần 1: Làm việc ở local.
+- Phần 2: Làm việc với remote.
 
 Trong bài này, chúng ta sẽ đi tìm hiểu về cách sử dụng Git để quản lý code ở local. Còn về làm việc với remote, tôi sẽ trình bày nốt trong bài tiếp theo. Tuy nhiên, trước khi đi vào từng nội dung cụ thể, ta làm một số thao tác chuẩn bị cơ bản đã. Bắt đầu nào!
 
@@ -184,9 +184,9 @@ $ git diff 9a98bc98 first_file.txt
 
 Reset, checkout và revert là 3 khái niệm khá là lằng nhằng và dễ nhầm lẫn trong Git. Ba từ khóa này thường được sử dụng trong việc phục hồi code. Tuy nhiên trước tiên chúng ta phải hiểu được Working Directory, Index (staged) và Repository – Commit – History. Sau đó chúng ta cần hiểu 3 bước liên quan đến các từ khóa này:
 
-*	Bước 1: HEAD có di chuyển hay không
-*	Bước 2: Index (Staged) có thay đổi hay không
-*	Bước 3: Working Directory có thay đổi hay không
+*	Bước 1: HEAD có di chuyển hay không.
+*	Bước 2: Index (Staged) có thay đổi hay không.
+*	Bước 3: Working Directory có thay đổi hay không.
 
 #### 3.1. Tìm hiểu về Checkout
 

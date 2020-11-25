@@ -1,15 +1,15 @@
 ---
-title: "Introduction to VS Code"
-slug: intro-to-vs-code
+title: "Windows Subsystem for Linux and R"
+slug: wsl2-and-r
 author: "Tuyen mfe"
-date: 2020-09-12
+date: 2020-09-28
 Categories:
 - Tutorial
 Tags:
 - Tutorial
 showTags: false
 thumbnailImagePosition: "left"
-thumbnailImage: /post/03-tutorial/06-vscode/vscode.png
+thumbnailImage: /post/03-tutorial/08-wsl2-and-r/wsl2-and-r.jpg
 comments: true
 clearReading: true
 metaAlignment: center

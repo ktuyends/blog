@@ -28,7 +28,7 @@ Chọn phương thức cài đặt nào là do nhu cầu của mỗi người. N
 Để cài đặt Ubuntu các bạn sẽ cần chuẩn bị 2 thứ.
 
 - Một USB tối thiểu 8GB để làm USB Boot.
-- Một [file ISO](https://ubuntu.com/download) cài đặt Ubuntu
+- Một [file ISO](https://ubuntu.com/download) cài đặt Ubuntu.
 
 Đối với USB Boot, các bạn sử dụng phần mềm [Rufus](https://rufus.ie/) để tạo Boot.
 
