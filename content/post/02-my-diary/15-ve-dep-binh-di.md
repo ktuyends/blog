@@ -16,7 +16,7 @@ summary: >
   <p style = "font-family:Roboto; font-weight: 400">Đang viết dở...</p>
 ---
 
-<p style = "font-family:Lora; font-weight: 400"><i>P/s: Đang viết dở...</i></p>
+<p style = "font-family:Lora; font-weight: 400">P/s: Đang viết dở...</p>
 
 ---
 
