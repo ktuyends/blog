@@ -28,7 +28,7 @@ summary: >
 
 <p style = "font-family:Lora; font-weight: 400">25 rồi, cũng không hy vọng sẽ làm được điều gì to lớn, chỉ mong học xong, sắp xếp ổn định mọi thứ. Để rồi, lại bắt đầu đi tìm câu trả lời, cho những câu hỏi mới,...</p>
 
-<p style = "font-family:Lora; font-weight: 400">P/s: Ơ, giờ ngồi viết bài này mới nhớ, mình quên chưa đòi quà nhỏ bạn, huhu, quà của tôi...</p>
+<p style = "font-family:Lora; font-weight: 400"><i>P/s: Ơ, giờ ngồi viết bài này mới nhớ, mình quên chưa đòi quà nhỏ bạn, huhu, quà của tôi...</i></p>
 
 ---
 

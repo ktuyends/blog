@@ -24,7 +24,7 @@ summary: >
 
 <p style = "font-family:Lora; font-weight: 400">Năm đó tớ buồn lắm, nhiều ngày trôi qua mỗi khi học xong bài thỉnh thoảng tớ lại vác cái "chiếu mành" đem ra sân và nằm ở ngoài đó, cứ nhìn lên bầu trời đầy sao kia và nghĩ lại những ngày tháng đã qua. Có thể nói năm đó người duy nhất nói chuyện với tớ mỗi ngày là cậu, cứ như vậy một năm trôi qua rồi một ngày cậu ra đi trong im lặng, tự nhiên tớ thấy hụt hẫng...</p>
 
-<p style = "font-family:Lora; font-weight: 400">P/s: Đôi khi lỡ hẹn một giờ, lần sau muốn gặp phải chờ trăm năm,...</p>
+<p style = "font-family:Lora; font-weight: 400"><i>P/s: Đôi khi lỡ hẹn một giờ, lần sau muốn gặp phải chờ trăm năm,...</i></p>
 
 ---
 
