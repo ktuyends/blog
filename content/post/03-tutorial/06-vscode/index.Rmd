@@ -18,5 +18,28 @@ output:
     toc: TRUE
 description: "Tutorials"
 summary: >
-   Đang suy nghĩ!
+   Visual Studio Code (VS Code) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng...
+---
+
+Visual Studio Code (VS Code) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng và gồm rất nhiều tính năng thú vị.
+
+Trong bài viết này, tôi sẽ đi thực hiện từng bước để thiết kế một môi trường hỗ trợ cho công việc lập trình R của mình. Vì, ngôn ngữ chính tôi đang học tập là R. Bắt đầu nào!
+
+## 1. VS Code and R
+
+### 1.1. Download và cài đặt
+
+Đầu tiên, các bạn vào các link dưới đây, Download phiên bản tương ứng với hệ điều hành và tiến hành cài đặt.
+
+- [R Language](https://www.r-project.org/) 
+- [VS Code](https://code.visualstudio.com/) 
+
+Sau khi cài đặt xong, các bạn bật VS Code lên, sẽ có giao diện giống như hình bên dưới:
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/vscode-gui.png" style="max-width:75%"></p>
+
+
+## 2. Sử dụng VS Code cơ bản
+
+
 ---
