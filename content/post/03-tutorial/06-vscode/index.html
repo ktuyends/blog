@@ -1,5 +1,5 @@
 ---
-title: "Introduction to VS Code"
+title: "Introduction to VSCode"
 slug: intro-to-vs-code
 author: "Tuyen mfe"
 date: 2020-09-12
@@ -18,7 +18,7 @@ output:
     toc: TRUE
 description: "Tutorials"
 summary: >
-   Visual Studio Code (VS Code) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng...
+   Visual Studio Code (VSCode) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng...
 ---
 
 <link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
@@ -26,31 +26,64 @@ summary: >
 
 <div id="TOC">
 <ul>
-<li><a href="#vs-code-and-r">1. VS Code and R</a><ul>
+<li><a href="#vscode-cơ-bản">1. VSCode cơ bản</a><ul>
 <li><a href="#download-và-cài-đặt">1.1. Download và cài đặt</a></li>
+<li><a href="#làm-quen-với-giao-diện-của-vscode">1.2. Làm quen với giao diện của VSCode</a></li>
+<li><a href="#quản-lý-files-và-folders">1.3. Quản lý files và folders</a></li>
+<li><a href="#cài-đặt-và-quản-lý-extension">1.4. Cài đặt và quản lý extension</a></li>
+<li><a href="#một-số-phím-tắt-cơ-bản">1.5. Một số phím tắt cơ bản</a></li>
+<li><a href="#một-số-thao-tác-code-trên-vscode">1.6. Một số thao tác code trên VSCode</a></li>
 </ul></li>
-<li><a href="#sử-dụng-vs-code-cơ-bản">2. Sử dụng VS Code cơ bản</a></li>
+<li><a href="#writing-r-in-vscode">2. Writing R in VSCode</a><ul>
+<li><a href="#a-fresh-start">2.1. A Fresh Start</a></li>
+<li><a href="#interacting-with-an-r-session">2.2. Interacting with an R session</a></li>
+<li><a href="#working-with-multiple-r-sessions">2.3. Working with multiple R sessions</a></li>
+<li><a href="#debugging-r-in-vscode">2.4. Debugging R in VSCode</a></li>
+</ul></li>
 </ul>
 </div>
 
-<p>Visual Studio Code (VS Code) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng và gồm rất nhiều tính năng thú vị.</p>
+<p>Visual Studio Code (VSCode) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng và gồm rất nhiều tính năng thú vị.</p>
 <p>Trong bài viết này, tôi sẽ đi thực hiện từng bước để thiết kế một môi trường hỗ trợ cho công việc lập trình R của mình. Vì, ngôn ngữ chính tôi đang học tập là R. Bắt đầu nào!</p>
-<div id="vs-code-and-r" class="section level2">
-<h2>1. VS Code and R</h2>
+<div id="vscode-cơ-bản" class="section level2">
+<h2>1. VSCode cơ bản</h2>
 <div id="download-và-cài-đặt" class="section level3">
 <h3>1.1. Download và cài đặt</h3>
-<p>Đầu tiên, các bạn vào các link dưới đây, Download phiên bản tương ứng với hệ điều hành và tiến hành cài đặt.</p>
-<ul>
-<li><a href="https://www.r-project.org/">R Language</a></li>
-<li><a href="https://code.visualstudio.com/">VS Code</a></li>
-</ul>
-<p>Sau khi cài đặt xong, các bạn bật VS Code lên, sẽ có giao diện giống như hình bên dưới:</p>
+<p>Đầu tiên, các bạn vào các link dưới đây, Download phiên bản tương ứng với hệ điều hành và tiến hành cài đặt: <a href="https://code.visualstudio.com/">VSCode</a></p>
+<p>Sau khi cài đặt xong, các bạn bật VSCode lên, sẽ có giao diện giống như hình bên dưới:</p>
 <p align="center">
 <img src="/post/03-tutorial/06-vscode/vscode-gui.png" style="max-width:75%">
 </p>
 </div>
+<div id="làm-quen-với-giao-diện-của-vscode" class="section level3">
+<h3>1.2. Làm quen với giao diện của VSCode</h3>
 </div>
-<div id="sử-dụng-vs-code-cơ-bản" class="section level2">
-<h2>2. Sử dụng VS Code cơ bản</h2>
+<div id="quản-lý-files-và-folders" class="section level3">
+<h3>1.3. Quản lý files và folders</h3>
+</div>
+<div id="cài-đặt-và-quản-lý-extension" class="section level3">
+<h3>1.4. Cài đặt và quản lý extension</h3>
+</div>
+<div id="một-số-phím-tắt-cơ-bản" class="section level3">
+<h3>1.5. Một số phím tắt cơ bản</h3>
+</div>
+<div id="một-số-thao-tác-code-trên-vscode" class="section level3">
+<h3>1.6. Một số thao tác code trên VSCode</h3>
+</div>
+</div>
+<div id="writing-r-in-vscode" class="section level2">
+<h2>2. Writing R in VSCode</h2>
+<div id="a-fresh-start" class="section level3">
+<h3>2.1. A Fresh Start</h3>
+</div>
+<div id="interacting-with-an-r-session" class="section level3">
+<h3>2.2. Interacting with an R session</h3>
+</div>
+<div id="working-with-multiple-r-sessions" class="section level3">
+<h3>2.3. Working with multiple R sessions</h3>
+</div>
+<div id="debugging-r-in-vscode" class="section level3">
+<h3>2.4. Debugging R in VSCode</h3>
 <hr />
+</div>
 </div>
