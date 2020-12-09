@@ -27,8 +27,31 @@ WSL (Windows Subsystem for Linux) là một tính năng có sẵn trên Windows.
 
 ---
 
-P/s: Hiện nay đã có WSL 2, nhưng nó lại yêu cầu phải update Windows 10 lên version 2004 build 1904. Thế nhưng, phiên bản này hiện nay vẫn đang trong quá trình thử nghiệm và gặp rất nhiều lỗi nên tôi tạm thời chưa muốn thử.
+## 1. Cài đặt WSL2 
 
-Nếu các bạn muốn trải nghiệm, có thể làm theo tutorial của anh Jeffrey Girard [ở đây](https://jmgirard.com/rstudio-wsl2/).
+### 1.1. Windows 10 Requirements
 
+### 1.2. Bật tính năng WSL và Virtual Machine Platform
 
+### 1.3. Cài đặt và chạy Ubuntu
+
+### 1.4. Cài đặt Windows Terminal
+
+### 1.5. Một số thao tác cơ bản
+
+## 2. Cài đặt RStudio Server trong WSL2
+
+### 2.1. Cài đặt R
+
+### 2.2. Cài đặt RStudio Server
+
+### 2.3. Một số thao tác cơ bản
+
+## 3. References
+
+* [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+* [Windows Subsystem for Linux 2: The Complete Guide](https://www.sitepoint.com/wsl2/)
+* [Using RStudio Server in Windows WSL2
+](https://support.rstudio.com/hc/en-us/articles/360049776974-Using-RStudio-Server-in-Windows-WSL2)
+
+---
