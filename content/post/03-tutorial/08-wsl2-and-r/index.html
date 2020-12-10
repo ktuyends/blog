@@ -29,14 +29,16 @@ summary: >
 <li><a href="#cài-đặt-wsl2">1. Cài đặt WSL2</a><ul>
 <li><a href="#windows-10-requirements">1.1. Windows 10 Requirements</a></li>
 <li><a href="#bật-tính-năng-wsl-và-virtual-machine-platform">1.2. Bật tính năng WSL và Virtual Machine Platform</a></li>
-<li><a href="#cài-đặt-và-chạy-ubuntu">1.3. Cài đặt và chạy Ubuntu</a></li>
-<li><a href="#cài-đặt-windows-terminal">1.4. Cài đặt Windows Terminal</a></li>
-<li><a href="#một-số-thao-tác-cơ-bản">1.5. Một số thao tác cơ bản</a></li>
+<li><a href="#cài-đặt-và-chạy-ubuntu-và-windows-terminal">1.3. Cài đặt và chạy Ubuntu và Windows Terminal</a></li>
+<li><a href="#di-chuyển-linux-disk-image">1.4. Di chuyển Linux Disk Image</a></li>
+<li><a href="#truy-cập-các-files-linux-từ-windows">1.5. Truy cập các files Linux từ Windows</a></li>
+<li><a href="#truy-cập-các-files-windows-từ-linux">1.6. Truy cập các files Windows từ Linux</a></li>
+<li><a href="#chạy-các-lệnh-linux-từ-windows">1.7. Chạy các lệnh Linux từ Windows</a></li>
+<li><a href="#chạy-các-ứng-dụng-windows-từ-linux">1.8. Chạy các ứng dụng Windows từ Linux</a></li>
 </ul></li>
 <li><a href="#cài-đặt-rstudio-server-trong-wsl2">2. Cài đặt RStudio Server trong WSL2</a><ul>
 <li><a href="#cài-đặt-r">2.1. Cài đặt R</a></li>
 <li><a href="#cài-đặt-rstudio-server">2.2. Cài đặt RStudio Server</a></li>
-<li><a href="#một-số-thao-tác-cơ-bản-1">2.3. Một số thao tác cơ bản</a></li>
 </ul></li>
 <li><a href="#references">3. References</a></li>
 </ul>
@@ -49,30 +51,150 @@ summary: >
 <h2>1. Cài đặt WSL2</h2>
 <div id="windows-10-requirements" class="section level3">
 <h3>1.1. Windows 10 Requirements</h3>
+<p>Yêu cầu cơ bản nhất khi cài đặt WSL2 là các bạn phải sử dụng hệ điều hành Windows 10 version 1903 trở lên, và là bản update mới nhất. Windows của các bạn cũng phải hỗ trợ Microsoft Store, vì một số ứng dụng cài trực tiếp từ trên này.</p>
+<p>Để kiểm tra version Windows đang sử dụng, các bạn dùng tổ hợp phím <code>Windows + R</code> hoặc tìm ứng dụng Run trong Windows, rồi gõ <code>winver</code>. Kết quả như sau:</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/winver.png" style="max-width:65%">
+</p>
 </div>
 <div id="bật-tính-năng-wsl-và-virtual-machine-platform" class="section level3">
 <h3>1.2. Bật tính năng WSL và Virtual Machine Platform</h3>
+<p>Mở Powershell với quyền Admin. Và chạy lần lượt các lệnh dưới đây để bật 2 tính năng trên:</p>
+<pre class="bash"><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code></pre>
+<pre class="bash"><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code></pre>
+<p>Sau khi hoàn thành, hãy RESTART lại máy tính để nó hoàn tất việc cài đặt. Cuối cùng, các bạn mở lại Powershell với quyền Admin và chạy lệnh dưới đây để cài đặt chế độ sử dụng mặc định là WSL2.</p>
+<pre class="bash"><code>wsl --set-default-version 2</code></pre>
+<p>Nếu lần đầu các bạn cài đặt, có thể sẽ gặp phải thông báo như này: <em>WSL 2 requires an update to its kernel component. For information
+please visit <a href="https://aka.ms/wsl2kernel" class="uri">https://aka.ms/wsl2kernel</a></em>, có nghĩa là máy tính của bạn chưa cài đặt nhân Linux. Các bạn vào link <a href="https://aka.ms/wsl2kernel" class="uri">https://aka.ms/wsl2kernel</a>, tải file cài đặt về và cài đặt. Sau khi xong thì chạy lại lệnh trên.</p>
+<p>Minh họa bằng hình ảnh:</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/1.png" style="max-width:75%">
+</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/3.png" style="max-width:75%">
+</p>
 </div>
-<div id="cài-đặt-và-chạy-ubuntu" class="section level3">
-<h3>1.3. Cài đặt và chạy Ubuntu</h3>
+<div id="cài-đặt-và-chạy-ubuntu-và-windows-terminal" class="section level3">
+<h3>1.3. Cài đặt và chạy Ubuntu và Windows Terminal</h3>
+<p>Hai ứng dụng này, được cài đặt trực tiếp từ <a href="https://aka.ms/wslstore">Microsoft Store</a>:</p>
+<ul>
+<li><a href="https://www.microsoft.com/vi-vn/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&amp;activetab=pivot:overviewtab">Ubuntu 20.04 LTS</a></li>
+<li><a href="https://www.microsoft.com/vi-vn/p/windows-terminal/9n0dx20hk701?rtc=1&amp;activetab=pivot:overviewtab">Windows Terminal</a></li>
+</ul>
+<p>Sau khi cài đặt xong, hãy bật Ubuntu lên. Lần đầu chạy Ubuntu, nó sẽ hỏi các bạn nhập user và password. Lưu ý là lúc nhập password nó sẽ không hiện gì hết, các bạn cứ nhập bình thường nha.</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/4.png" style="max-width:75%">
+</p>
+<p>Thêm tính năng copy và paste và Ubuntu:</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/5.png" style="max-width:75%">
+</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/6.png" style="max-width:75%">
+</p>
+<p>Như vậy là giờ ta có thể sử dụng tổ hợp <code>Ctrl + Shift + C/V</code> để copy hoặc paste rồi.</p>
+<p>Bước cuối cùng, cấu hình cho Ubuntu sử dụng WSL 2:</p>
+<p>Vẫn như ở trên, các bạn bật Powershell và chạy các lệnh dưới đây:</p>
+<pre class="bash"><code># Liệt kê danh sách các app linux
+wsl --list --verbose</code></pre>
+<pre class="bash"><code># &lt;distribution name&gt;: Tên của app linux, ví dụ Ubuntu-20.04
+# &lt;versionNumber&gt;: Version của WSL, ở đây mình chọn 2
+wsl --set-version &lt;distribution name&gt; &lt;versionNumber&gt;</code></pre>
+<p>Đến đây về cơ bản là chúng ta đã cài xong WSL2 trên Windows rồi đó. Trong các phần tiếp theo, chúng ta sẽ làm quen với một số thao tác cơ bản trên WSL2.</p>
 </div>
-<div id="cài-đặt-windows-terminal" class="section level3">
-<h3>1.4. Cài đặt Windows Terminal</h3>
+<div id="di-chuyển-linux-disk-image" class="section level3">
+<h3>1.4. Di chuyển Linux Disk Image</h3>
+<p>Theo mặc định, Linux/Ubuntu được cài đặt ở ổ <code>C:</code>, nhưng đôi khi ổ <code>C:</code> không đủ dung lượng, các bạn có thể làm theo các bước dưới đây để di chuyển nó qua một ổ đĩa khác. Ở đây mình ví dụ là ổ <code>D:</code></p>
+<p>Chúng ta tiếp tục với Powershell:</p>
+<pre class="bash"><code># Xem danh sách các bản linux được cài đặt:
+wsl --list
+
+# Tạo một file backup .tar trong D:\backup
+mkdir D:\backup
+wsl --export Ubuntu-20.04 D:\backup\ubuntu.tar
+
+# Xóa nó khỏi ổ C:
+wsl --unregister Ubuntu-20.04
+
+# Import vào ổ D:
+mkdir D:\wsl
+wsl --import Ubuntu-20.04 D:\wsl\ D:\backup\ubuntu.tar
+
+# Xem lại danh sách các bản linux
+wsl --list</code></pre>
+<p>Như vậy là hoàn tất và các bạn có thể xóa file backup ở trong <code>D:\backup</code>. Tuy nhiên, còn một vấn đề là Ubuntu bây giờ sẽ sử dụng tài khoản <code>root</code> làm tài khoản mặc định và ta cần thay đổi lại nó trong ubuntu:</p>
+<pre class="bash"><code># &lt;yourname&gt; là tên bạn khởi tạo khi cài đặt ubuntu
+ubuntu config --default-user &lt;yourname&gt;</code></pre>
 </div>
-<div id="một-số-thao-tác-cơ-bản" class="section level3">
-<h3>1.5. Một số thao tác cơ bản</h3>
+<div id="truy-cập-các-files-linux-từ-windows" class="section level3">
+<h3>1.5. Truy cập các files Linux từ Windows</h3>
+<p>Đầu tiên, Ubuntu phải được bật. Sau đó, các bạn vào File Explorer hoặc My Computer. Nhập <code>\\wsl$\</code> vào ô địa chỉ. Kết quả như sau:</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/ubuntu-files.png" style="max-width:75%">
+</p>
+<p>Các files cá nhân cơ bản sẽ được lưu trữ ở địa chỉ:</p>
+<pre class="bash"><code>\\wsl$\Ubuntu-20.04\home\&lt;username&gt;</code></pre>
+<p>Để thuận tiện cho việc sử dụng, các bạn có thể tạo một ổ đĩa ảo cho Ubuntu bằng cách sau: Vào địa chỉ <code>\\wsl$\</code>, chuột phải vào phiên bản Ubuntu muốn tạo ổ đĩa và chọn <strong>Map network drive</strong>:</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/map-disk.png" style="max-width:75%">
+</p>
+</div>
+<div id="truy-cập-các-files-windows-từ-linux" class="section level3">
+<h3>1.6. Truy cập các files Windows từ Linux</h3>
+<p>Linux sử dụng một thư mục có tên là <code>/mnt/</code>. Và ta hiểu đơn giản, thư mục này giống như My Computer ý. Trong đó, sẽ gồm các ổ đĩa như <code>C:, D:,...</code></p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/list-disk.png" style="max-width:75%">
+</p>
+</div>
+<div id="chạy-các-lệnh-linux-từ-windows" class="section level3">
+<h3>1.7. Chạy các lệnh Linux từ Windows</h3>
+<p>Mọi lệnh Linux (Bash) đều có thể được chạy từ Powershell hoặc Terminal sử dụng:</p>
+<pre class="bash"><code>wsl &lt;linux-command&gt;</code></pre>
+</div>
+<div id="chạy-các-ứng-dụng-windows-từ-linux" class="section level3">
+<h3>1.8. Chạy các ứng dụng Windows từ Linux</h3>
+<p>Hầu hết các ứng dụng trong Windows có thể khởi chạy trong Linux, thường thường yêu cầu có phần mở rộng là <code>.exe</code>. Ví dụ mở File Explorer:</p>
+<pre class="bash"><code># Mở file explorer
+explorer.exe</code></pre>
 </div>
 </div>
 <div id="cài-đặt-rstudio-server-trong-wsl2" class="section level2">
 <h2>2. Cài đặt RStudio Server trong WSL2</h2>
+<p>Trong phần này, các lệnh sẽ chạy trực tiếp trong Ubuntu bởi vì chúng ta đang cài trong Ubuntu. Tuy nhiên, trước tiên ta cần update Ubuntu với các lệnh sau:</p>
+<pre class="bash"><code>sudo apt update -y
+sudo apt upgrade -y</code></pre>
 <div id="cài-đặt-r" class="section level3">
 <h3>2.1. Cài đặt R</h3>
+<p>Để cài đặt R, các bạn chạy lần lượt các lệnh dưới đây:</p>
+<pre class="bash"><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+
+sudo add-apt-repository &#39;deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/&#39;
+
+sudo apt update
+
+sudo apt install -y r-base r-base-core r-recommended r-base-dev gdebi-core build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev</code></pre>
+<p>Sau khi cài đặt xong, hãy chạy lệnh <code>R --version</code> để kiểm tra:</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/9.png" style="max-width:75%">
+</p>
 </div>
 <div id="cài-đặt-rstudio-server" class="section level3">
 <h3>2.2. Cài đặt RStudio Server</h3>
-</div>
-<div id="một-số-thao-tác-cơ-bản-1" class="section level3">
-<h3>2.3. Một số thao tác cơ bản</h3>
+<p>Để cài đặt RStudio Server, chúng ta sử dụng 2 lệnh sau:</p>
+<pre class="bash"><code>wget https://rstudio.org/download/latest/stable/server/bionic/rstudio-server-latest-amd64.deb
+
+sudo gdebi rstudio-server-latest-amd64.deb</code></pre>
+<p>Sau đó, để bắt đầu với RStudio:</p>
+<pre class="bash"><code>sudo rstudio-server start</code></pre>
+<p>Để vào RStudio, các bạn bật trình duyệt web và truy cập vào địa chỉ sau: <a href="http://localhost:8787/" class="uri">http://localhost:8787/</a>. Các bạn đăng nhập bằng tài khoản và password lúc cài đặt Ubuntu nha.</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/10.png" style="max-width:75%">
+</p>
+<p align="center">
+<img src="/post/03-tutorial/08-wsl2-and-r/11.png" style="max-width:75%">
+</p>
+<p>Cuối cùng, khi không muốn sử dụng nữa, hãy thoát Rstudio với lệnh:</p>
+<pre class="bash"><code>sudo rstudio-server stop</code></pre>
 </div>
 </div>
 <div id="references" class="section level2">
