@@ -25,7 +25,7 @@ Visual Studio Code (VSCode) là một trong những trình soạn thảo mã ngu
 
 Trong bài viết này, tôi sẽ đi thực hiện từng bước để thiết kế một môi trường hỗ trợ cho công việc lập trình R của mình. Vì, ngôn ngữ chính tôi đang học tập là R. Bắt đầu nào!
 
-## 1. VSCode cơ bản
+## 1. Introduction to VSCode
 
 ### 1.1. Download và cài đặt
 
@@ -38,22 +38,104 @@ Sau khi cài đặt xong, các bạn bật VSCode lên, sẽ có giao diện gi�
 
 ### 1.2. Làm quen với giao diện của VSCode
 
+**Thanh sidebar:**
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/sidebar.png" style="max-width:40%"></p>
+
+Vùng giao diện này gồm 5 tính năng chính:
+
+- Explorer: Quản lý các file và thư mục đang làm việc.
+- Search: Tìm kiếm và thay thế.
+- Source Control: Quản lý các repository, version khi thực hành code. 
+- Run: Thực thi code và debug.
+- Extensions: Quản lý các tiện ích mở rộng.
+
+**Thanh trạng thái:**
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/thanh-trang-thai.png" style="max-width:100%"></p>
+
+Góc dưới bên trái của thanh trạng thái thể hiện các tình trạng về Git, số error và warning.
+
+Góc dưới bên phải của thanh trạng thái thể hiện số dòng, số cột, định dạng encoding, ký tự kết thúc dòng (Có thể là LF hoặc CRLF) và cuối cùng là ngôn ngữ sử dụng.
+
+**Khung nhập lệnh:**
+
+Để bật khung nhập lệnh, sử dụng tổ hợp phím tắt: `Ctrl + P`
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/khung-nhap-lenh.png" style="max-width:100%"></p>
+
+Khung nhập lệnh trên giúp ta tìm kiếm và mở các file nhanh hơn. Để chạy một lệnh nào đó cho VSCode, ta dùng tổ hợp phím: `Ctrl + Shift + P`. Để ý khung hiện ra tương tự khung trên, nhưng có thêm ký tự `>`
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/khung-nhap-lenh-2.png" style="max-width:100%"></p>
+
+Ngoài các khung trên, VSCode còn có phần Menu Bar, Editors Tab, Panel và Minimap. Cái này khá dễ nhận biết, nên mình sẽ không đi thêm nữa.
+
 ### 1.3. Quản lý files và folders
+
+Bước đầu tiên, khi làm việc với code chúng ta nên tạo ra các folders cho từng project. Để mở một folders hoặc project trong VSCode. Ta vào `File -> Open Folder`. Khi đó, toàn bộ các file trong folders sẽ được import vào trong VSCode.
+
+**Duyệt file và tìm kiếm:** Cách đơn giản nhất là tìm các file bên trong thanh sidebar, hoặc dùng phím tắt: `Ctrl + P` và gõ tên file cần tìm kiếm vào trong khung nhập lệnh.
+
+**Tạo file và folder:** Ta cũng có 2 cách, cách thứ nhất là chuột phải vào folders sau đó chọn tạo `New file` hoặc `New folder`. Cách thứ hai là sử dụng các icon trên thanh sidebar.
+
+Với một số thao tác trực tiếp với files và folders, các bạn chuột phải vào file hoặc folder cần tương tác và lựa chọn hành động tương ứng.
 
 ### 1.4. Cài đặt và quản lý extension
 
-### 1.5. Một số phím tắt cơ bản
+Extensions hiểu đơn giản nó giống như các ứng dụng trên CH Play hoặc App Store. Chỉ khác là các ứng dụng này nhằm mở rộng các tính năng cho VSCode thôi. 
 
-### 1.6. Một số thao tác code trên VSCode
+Để tải và cài đặt một extension, trên thanh sidebar, bấm chọn Extension. Sau đó, tìm kiếm các Extension muốn cài đặt và chọn Install.
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/extension.png" style="max-width:80%"></p>
+
+### 1.5. Bật Terminal trong VSCode
+
+Mặc định, khi cài đặt Panel sẽ bị ẩn. Terminal hoạt động ở khu vực của Panel. Để bật Terminal, các bạn vào `View -> Terminal`:
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/terminal.png" style="max-width:70%"></p>
+
+### 1.5. Multi selection
+
+Phần này mình note lại là chính, nếu các bạn muốn tìm hiểu sâu về các tips trong VSCode thì nên đọc bài viết này: [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks).
+
+**Multi cursor selection:**
+
+Đây là tính năng giúp các bạn lựa chọn và edit từ nhiều vị trí trong files code. Cơ bản nhất, để thêm con trỏ vào một vị trí tùy ý nào đó hãy sử dụng tổ hợp: `Alt + Click`
+
+Tổ hợp phím: `Ctrl + Alt + Up/Down` - Đặt con trỏ ở cùng vị trí trên dòng trên hoặc dưới. Trường hợp một dòng trắng, sẽ đặt con trỏ vào đầu dòng.
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/multicursor.gif" style="max-width:100%"></p>
+
+Trường hợp, muốn thêm con trỏ cho tất cả các đoạn, giống đoạn đang được lựa chọn (bôi đen) sử dụng: `Ctrl + Shift + L`
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/add_cursor_current_selection.gif" style="max-width:100%"></p>
+
+Bỗng dưng, bạn chỉ muốn thêm con trỏ cho đoạn selection tiếp theo thay vì tất cả, sử dụng tổ hợp: `Ctrl + D`
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/add_cursor_current_selection_one_by_one.gif" style="max-width:100%"></p>
+
+**Column (box) selection:**
+
+Lựa chọn văn bản theo khối, sử dụng tổ hợp: `Shift + Alt + Kéo chuột`
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/column-select.gif" style="max-width:100%"></p>
 
 ## 2. Writing R in VSCode
 
-### 2.1. A Fresh Start
+### 2.1. A fresh start
 
 ### 2.2. Interacting with an R session
 
 ### 2.3. Working with multiple R sessions
 
 ### 2.4. Debugging R in VSCode
+
+## 3. References
+
+- [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
+- [Writing R in VSCode: A Fresh Start]()
+- [Writing R in VSCode: Interacting with an R session](https://renkun.me/2019/12/26/writing-r-in-vscode-interacting-with-an-r-session/)
+- [Writing R in VSCode: Working with multiple R sessions](https://renkun.me/2020/04/14/writing-r-in-vscode-working-with-multiple-r-sessions/)
+- [Debugging R in VSCode](https://renkun.me/2020/09/13/debugging-r-in-vscode/)
 
 ---

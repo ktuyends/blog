@@ -220,7 +220,7 @@ sudo rstudio-server start
 
 <p align="center"><img src="/post/03-tutorial/08-wsl2-and-r/11.png" style="max-width:75%"></p>
 
-Cuối cùng, khi không muốn sử dụng nữa, hãy thoát Rstudio với lệnh:
+Cuối cùng, khi không muốn sử dụng nữa, hãy thoát RStudio với lệnh:
 
 ```bash
 sudo rstudio-server stop
