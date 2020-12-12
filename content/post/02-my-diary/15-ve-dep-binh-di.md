@@ -30,7 +30,7 @@ summary: >
 
 <p style = "font-family:Lora; font-weight: 400">Thanh xuân tôi lang bạt nhiều, mỗi thế giới là một câu chuyện riêng. Thế nhưng, tôi ít khi đem chuyện của thế giới này kể ở thế giới khác. Lúc Trang hỏi tôi, tôi đã từng nghĩ đến một người. Trong một lần, vô tình tôi bị mấy chú CSGT bắt vì tội ngớ ngẩn nào đó. Có một cô gái nhỏ bé, đứng ra xin các chú giúp tôi. Trời ơi, lần đầu tiên tôi thấy em nó đáng yêu như vậy.</p>
 
-<p style = "font-family:Lora; font-weight: 400">Rồi có đôi lần, khi thấy một ai đó vừa nấu cơm vừa nói chuyện trên trời dưới biển, nào là cái rau này phải làm thế này, cái củ kia phải làm thế kia,...Tôi bắt đầu cảm thấy có hứng thú, mặc dù hình ảnh này rất là đời thường, không hiểu vì sao tôi lại thấy nó thật đẹp. Bỗng dưng, tôi nhớ đến bài <a href="/2015/05/happy-simple/">simple happiness</a>, tôi viết nhiều năm trước, thì ra là vậy...</p>
+<p style = "font-family:Lora; font-weight: 400">Rồi có đôi lần, khi thấy một ai đó vừa vào bếp vừa nói chuyện trên trời dưới biển, nào là cái rau này phải làm thế này, cái củ kia phải làm thế kia, pha nước chấm thì tỏi phải nổi...Tôi bắt đầu cảm thấy có hứng thú, mặc dù hình ảnh này rất là đời thường, không hiểu vì sao tôi lại thấy nó thật đẹp. Có lẽ bản thân, cần có một ai đó bước đi bên cạnh, chỉ cho mình những thứ này. Những năm tháng qua, đa số thời gian đều làm cái gì không biết, hình như toàn là học toán. Bỗng dưng, tôi nhớ đến bài <a href="/2015/05/happy-simple/">simple happiness</a>, tôi viết nhiều năm trước...</p>
 
 <p style = "font-family:Lora; font-weight: 400">Giữa những xô bồ của cuộc sống thường ngày, có bao giờ bạn nhận ra rằng, đôi khi những điều nhỏ bé, giản dị quanh ta lại chính là những thứ đáng yêu nhất mà bấy lâu nay ta vẫn đang kiếm tìm hay không.</p>
 

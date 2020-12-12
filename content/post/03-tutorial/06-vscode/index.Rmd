@@ -133,7 +133,7 @@ Lựa chọn văn bản theo khối, sử dụng tổ hợp: `Shift + Alt + Kéo
 ## 3. References
 
 - [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
-- [Writing R in VSCode: A Fresh Start]()
+- [Writing R in VSCode: A Fresh Start](https://renkun.me/2019/12/11/writing-r-in-vscode-a-fresh-start/)
 - [Writing R in VSCode: Interacting with an R session](https://renkun.me/2019/12/26/writing-r-in-vscode-interacting-with-an-r-session/)
 - [Writing R in VSCode: Working with multiple R sessions](https://renkun.me/2020/04/14/writing-r-in-vscode-working-with-multiple-r-sessions/)
 - [Debugging R in VSCode](https://renkun.me/2020/09/13/debugging-r-in-vscode/)
