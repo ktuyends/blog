@@ -21,121 +21,144 @@ summary: >
    Visual Studio Code (VSCode) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng...
 ---
 
-Visual Studio Code (VSCode) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng và gồm rất nhiều tính năng thú vị.
-
-Trong bài viết này, tôi sẽ đi thực hiện từng bước để thiết kế một môi trường hỗ trợ cho công việc lập trình R của mình. Vì, ngôn ngữ chính tôi đang học tập là R. Bắt đầu nào!
+Visual Studio Code (VSCode) là một trong những trình soạn thảo mã nguồn phổ biến nhất được sử dụng bởi các lập trình viên. Nó nhanh, nhẹ, hỗ trợ đa nền tảng và gồm rất nhiều tính năng thú vị. Trong bài viết này, tôi sẽ đi thực hiện từng bước để thiết kế một môi trường hỗ trợ cho công việc lập trình R và Python. Bắt đầu nào!
 
 ## 1. Introduction to VSCode
 
-### 1.1. Download và cài đặt
+### 1.1. Chuẩn bị
 
-Đầu tiên, các bạn vào các link dưới đây, Download phiên bản tương ứng với hệ điều hành và tiến hành cài đặt: [VSCode](https://code.visualstudio.com/) 
+Chúng ta sẽ cần phải cài đặt 3 phần mềm dưới đây:
 
-Sau khi cài đặt xong, các bạn bật VSCode lên, sẽ có giao diện giống như hình bên dưới:
+- [R](https://www.r-project.org/)
+- [Python](https://www.python.org/downloads/) or [Anaconda](https://docs.anaconda.com/anaconda/install/)
+- [VSCode](https://code.visualstudio.com/download)
 
-<p align="center"><img src="/post/03-tutorial/06-vscode/vscode-gui.png" style="max-width:75%"></p>
+Kết quả:
 
+<p align="center"><img src="/post/03-tutorial/06-vscode/vscode-gui.png" style="max-width:80%"></p>
 
-### 1.2. Làm quen với giao diện của VSCode
+Về phần sử dụng VSCode như thế nào, các bạn có thể tìm trên [Youtube](https://www.youtube.com/). Bây giờ mình thấy các tutorial trên Youtube cũng khá là nhiều, không chỉ về VSCode mà còn nhiều cái khác nữa. Sau khi cài đặt xong 3 phần mềm trên và biết cách sử dụng sơ sơ, các bạn có thể cài thêm một số Extensions sau để cho nó đẹp hơn chút xíu:
 
-**Thanh sidebar:**
+- Theme [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) hoặc [Material](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
+- Bộ icon của [Material](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) hoặc [VSCode Icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+- Font [Fira Code](https://github.com/tonsky/FiraCode) và setup Ligatures
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) và [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+- [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
-<p align="center"><img src="/post/03-tutorial/06-vscode/sidebar.png" style="max-width:40%"></p>
+### 1.2. Một số thao tác cơ bản
 
-Vùng giao diện này gồm 5 tính năng chính:
+Phần này đúng hơn là một số phím tắt tôi lưu lại, để thực hành dần dần.
 
-- Explorer: Quản lý các file và thư mục đang làm việc.
-- Search: Tìm kiếm và thay thế.
-- Source Control: Quản lý các repository, version khi thực hành code. 
-- Run: Thực thi code và debug.
-- Extensions: Quản lý các tiện ích mở rộng.
+***Phím tắt chỉnh sửa văn bản:***
 
-**Thanh trạng thái:**
+| Phím tắt  |   Kết quả|
+|---|---|
+|Ctrl + Shift + K|Xóa dòng|
+|Ctrl + Enter|Chèn một dòng bên dưới|
+|Ctrl + Shift + Enter|Chèn một dòng bên trên|
+|Ctrl +  ⇓|Cuộn xuống|
+|Ctrl +  ⇑|Cuộn lên|
+|Ctrl + Shift + Alt + ⇓|Thêm con trỏ chuột ngay tại dòng bên dưới|
+|Ctrl + Shift + Alt + ⇑|Thêm con trỏ chuột ngay tại dòng bên trên|
+|Alt + Click|Thêm con trỏ chuột vào vị trí nào đó|
+|Shift + Alt +  ⇓/⇑|Copy nội dung dòng hiện tại xuống dưới hoặc lên trên|
+|Ctrl + D|Chọn văn bản giống văn bản hiện tại|
+|Ctrl + U|Hoàn tác thao tác chọn văn bản|
+|Ctrl + Shift + L|Chọn tất cả văn bản giống văn bản hiện tại, không phân biệt ký tự in hoa, in thường|
+|Ctrl + ]/[|Đẩy dòng sang phải hoặc trái|
+|Home/End|Chuyển con trỏ lên đầu dòng/cuối dòng|
+|Ctrl + Home/End|Chuyển con trỏ lên đầu file hoặc cuối file|
+|Ctrl + /| Commment Code|
+|Ctrl + F/H|Tìm kiếm, thay thế nội dung|
+|F3|Tìm tiếp theo|
 
-<p align="center"><img src="/post/03-tutorial/06-vscode/thanh-trang-thai.png" style="max-width:100%"></p>
+***Phím tắt khác:***
 
-Góc dưới bên trái của thanh trạng thái thể hiện các tình trạng về Git, số error và warning.
-
-Góc dưới bên phải của thanh trạng thái thể hiện số dòng, số cột, định dạng encoding, ký tự kết thúc dòng (Có thể là LF hoặc CRLF) và cuối cùng là ngôn ngữ sử dụng.
-
-**Khung nhập lệnh:**
-
-Để bật khung nhập lệnh, sử dụng tổ hợp phím tắt: `Ctrl + P`
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/khung-nhap-lenh.png" style="max-width:100%"></p>
-
-Khung nhập lệnh trên giúp ta tìm kiếm và mở các file nhanh hơn. Để chạy một lệnh nào đó cho VSCode, ta dùng tổ hợp phím: `Ctrl + Shift + P`. Để ý khung hiện ra tương tự khung trên, nhưng có thêm ký tự `>`
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/khung-nhap-lenh-2.png" style="max-width:100%"></p>
-
-Ngoài các khung trên, VSCode còn có phần Menu Bar, Editors Tab, Panel và Minimap. Cái này khá dễ nhận biết, nên mình sẽ không đi thêm nữa.
-
-### 1.3. Quản lý files và folders
-
-Bước đầu tiên, khi làm việc với code chúng ta nên tạo ra các folders cho từng project. Để mở một folders hoặc project trong VSCode. Ta vào `File -> Open Folder`. Khi đó, toàn bộ các file trong folders sẽ được import vào trong VSCode.
-
-**Duyệt file và tìm kiếm:** Cách đơn giản nhất là tìm các file bên trong thanh sidebar, hoặc dùng phím tắt: `Ctrl + P` và gõ tên file cần tìm kiếm vào trong khung nhập lệnh.
-
-**Tạo file và folder:** Ta cũng có 2 cách, cách thứ nhất là chuột phải vào folders sau đó chọn tạo `New file` hoặc `New folder`. Cách thứ hai là sử dụng các icon trên thanh sidebar.
-
-Với một số thao tác trực tiếp với files và folders, các bạn chuột phải vào file hoặc folder cần tương tác và lựa chọn hành động tương ứng.
-
-### 1.4. Cài đặt và quản lý extension
-
-Extensions hiểu đơn giản nó giống như các ứng dụng trên CH Play hoặc App Store. Chỉ khác là các ứng dụng này nhằm mở rộng các tính năng cho VSCode thôi. 
-
-Để tải và cài đặt một extension, trên thanh sidebar, bấm chọn Extension. Sau đó, tìm kiếm các Extension muốn cài đặt và chọn Install.
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/extension.png" style="max-width:80%"></p>
-
-### 1.5. Bật Terminal trong VSCode
-
-Mặc định, khi cài đặt Panel sẽ bị ẩn. Terminal hoạt động ở khu vực của Panel. Để bật Terminal, các bạn vào `View -> Terminal`:
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/terminal.png" style="max-width:70%"></p>
-
-### 1.5. Multi selection
-
-Phần này mình note lại là chính, nếu các bạn muốn tìm hiểu sâu về các tips trong VSCode thì nên đọc bài viết này: [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks).
-
-**Multi cursor selection:**
-
-Đây là tính năng giúp các bạn lựa chọn và edit từ nhiều vị trí trong files code. Cơ bản nhất, để thêm con trỏ vào một vị trí tùy ý nào đó hãy sử dụng tổ hợp: `Alt + Click`
-
-Tổ hợp phím: `Ctrl + Alt + Up/Down` - Đặt con trỏ ở cùng vị trí trên dòng trên hoặc dưới. Trường hợp một dòng trắng, sẽ đặt con trỏ vào đầu dòng.
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/multicursor.gif" style="max-width:100%"></p>
-
-Trường hợp, muốn thêm con trỏ cho tất cả các đoạn, giống đoạn đang được lựa chọn (bôi đen) sử dụng: `Ctrl + Shift + L`
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/add_cursor_current_selection.gif" style="max-width:100%"></p>
-
-Bỗng dưng, bạn chỉ muốn thêm con trỏ cho đoạn selection tiếp theo thay vì tất cả, sử dụng tổ hợp: `Ctrl + D`
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/add_cursor_current_selection_one_by_one.gif" style="max-width:100%"></p>
-
-**Column (box) selection:**
-
-Lựa chọn văn bản theo khối, sử dụng tổ hợp: `Shift + Alt + Kéo chuột`
-
-<p align="center"><img src="/post/03-tutorial/06-vscode/column-select.gif" style="max-width:100%"></p>
+| Phím tắt  | Kết quả|
+|---|---|
+|Ctrl + Z| Quay lại thao tác trước đó|
+|Ctrl + Y| Lặp lại thao tác tiếp theo|
+|Ctrl + Space| Gợi ý khi code các ngôn ngữ|
+|Ctrl + W| Đóng Tab hiện tại|
+|Ctrl + +/-| Tăng giảm font chữ|
 
 ## 2. Writing R in VSCode
 
-### 2.1. A fresh start
+**Step 1: Cài đặt các extension sau** 
 
-### 2.2. Interacting with an R session
+- [vscode-R](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)
+- [vscode-r-lsp](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r-lsp)
 
-### 2.3. Working with multiple R sessions
+**Step 2: Cài đặt packages sau trong R**
 
-### 2.4. Debugging R in VSCode
+```{r eval = FALSE, include = TRUE}
+# Cài đặt package languageserver
+install.packages("languageserver")
 
-## 3. References
+# Cài đặt thông qua Github
+remotes::install_github("REditorSupport/languageserver")
+```
+
+**Step 3: Cài đặt Radian**
+
+Radian là một R console với nhiều tính năng hơn R console mặc định. Nó được viết bằng Python nên ta có thể cài đặt nó thông qua pip:
+
+```{python eval = FALSE, include = TRUE}
+# install released version
+pip install -U radian
+```
+
+**Step 4: Cấu hình trong VSCode**
+
+Sử dụng tổ hợp phím: Ctrl + Shift + P và tìm cụm từ: *preferences: Open Settings (JSON)*, sau đó thêm nội dung sau vào file `settings.json`:
+
+```
+{
+    "r.alwaysUseActiveTerminal": true,
+    "r.bracketedPaste": true,
+    "r.sessionWatcher": true,
+    "r.rterm.windows": "Path_to_radian.exe",
+    "r.rpath.windows": "Path_to_R.exe",
+    "r.lsp.debug": true,
+    "r.lsp.diagnostics": true,
+    "r.rterm.option": [
+          "--no-save",
+          "--no-restore",
+          "--r-binary=Path_to_R.exe"
+      ],    
+}
+```
+
+Đây là cấu hình của tôi:
+
+<p align="center"><img src="/post/03-tutorial/06-vscode/settings-vscode.png" style="max-width:100%"></p>
+
+Cuối cùng thì, khởi động lại VS Code và tận hưởng thành quả thôi nào!
+
+<p align="center"><a href="https://github.com/Ikuyadeu/vscode-R/wiki/R-Session-watcher"><img src="/post/03-tutorial/06-vscode/r-session-watcher.gif" alt="R Session watcher" style="max-width:100%"></a></p>
+
+## 3. Writing Python in VSCode
+
+Tạm thời, mình chưa code Python, tuy nhiên nếu các bạn muốn code Python thì có 3 extensions sau các bạn có thể cài để thực hành Python tốt hơn:
+
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+- [Python Extension Pack](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack)
+
+## 4. References
 
 - [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
 - [Writing R in VSCode: A Fresh Start](https://renkun.me/2019/12/11/writing-r-in-vscode-a-fresh-start/)
 - [Writing R in VSCode: Interacting with an R session](https://renkun.me/2019/12/26/writing-r-in-vscode-interacting-with-an-r-session/)
 - [Writing R in VSCode: Working with multiple R sessions](https://renkun.me/2020/04/14/writing-r-in-vscode-working-with-multiple-r-sessions/)
 - [Debugging R in VSCode](https://renkun.me/2020/09/13/debugging-r-in-vscode/)
+- [Python Development in Visual Studio Code](https://realpython.com/python-development-visual-studio-code/)
+- [How to integrate Python and R in Visual Studio Code](https://towardsdatascience.com/how-to-integrate-python-and-r-in-visual-studio-code-496a47c90422)
 
 ---
