@@ -13,7 +13,7 @@ clearReading: false
 comments: true
 description: "My Diary"
 summary: >
-  Writing...
+  Chiều mưa câm lặng, ngồi ăn bữa cơm chiều với bố, rồi đi gặp vài đứa bạn thân. Cuộc sống, đơn giản vậy thôi. Sáng thức giấc, làm những việc cần làm, xong xuôi thì đi ngủ để đợi một ngày mai khác...
 ---
 
 <p style = "font-family:Lora; font-weight: 400">Writing</p>
