@@ -66,13 +66,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
   weight = 0
   identifier = "projects"
   name = "Projects"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-newspaper-o\"></i>"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bar-chart\"></i>"
   url = "/page/01-projects/"
 [[menu.links]]
   weight = 1
   identifier = "tutorial"
   name = "Tutorials"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa fa-leanpub\"></i>"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa fa-book\"></i>"
   url = "/categories/tutorial/"
 [[menu.links]]
   weight = 2
@@ -84,15 +84,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 # Mang xa hoi
 [[menu.misc]]
   weight = 0
-  identifier = "vitae"
-  name = "Vitae"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-address-book-o\"></i>"
-  url = "/page/02-curriculum-vitae/"
+  identifier = "linkedin"
+  name = "Linkedin"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
+  url = "https://www.linkedin.com/in/ktuyends/"
 [[menu.misc]]
   weight = 2
   identifier = "github"
   name = "GitHub"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github-alt\"></i>"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/ktuyends"
 [[menu.misc]]
   weight = 1

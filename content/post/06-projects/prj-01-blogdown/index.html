@@ -1,5 +1,5 @@
 ---
-title: "Prj 01: Bắt đầu bằng xây dựng 1 blog"
+title: "Các bước xây dựng một blog"
 slug: prj-01-how-to-start-a-blog
 author: "Tuyen mfe"
 date: 2020-10-28
@@ -19,21 +19,24 @@ output:
     toc: TRUE
 description: "Mini Project"
 summary: >
-   Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,...
+   Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,...Rồi, có một ngày, tôi vô tình đọc được ở đâu đó...
 ---
 
+<script src="index_files/header-attrs/header-attrs.js"></script>
 <link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
 <script src="index_files/anchor-sections/anchor-sections.js"></script>
 
 <div id="TOC">
 <ul>
 <li><a href="#chuẩn-bị">1. Chuẩn bị</a></li>
-<li><a href="#tạo-blog-cơ-bản">2. Tạo blog cơ bản</a><ul>
+<li><a href="#tạo-blog-cơ-bản">2. Tạo blog cơ bản</a>
+<ul>
 <li><a href="#tạo-blog">2.1. Tạo blog</a></li>
 <li><a href="#cấu-trúc-thư-mục-của-hugo">2.2. Cấu trúc thư mục của Hugo</a></li>
 <li><a href="#build-website-ở-local">2.3. Build website ở local</a></li>
 </ul></li>
-<li><a href="#tùy-chỉnh-blog">3. Tùy chỉnh blog</a><ul>
+<li><a href="#tùy-chỉnh-blog">3. Tùy chỉnh blog</a>
+<ul>
 <li><a href="#edit-file-config.toml">3.1. Edit file Config.toml</a></li>
 <li><a href="#html-tag">3.2. HTML Tag</a></li>
 <li><a href="#mathjax">3.3. Mathjax</a></li>
@@ -52,9 +55,9 @@ summary: >
 
 <p>Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,…nhưng tôi không thực sự hài lòng cho lắm với những yêu cầu của mình.</p>
 <p>Rồi, có một ngày, tôi vô tình đọc được ở đâu đó, một bài viết giới thiệu về Hugo. Lúc đó, tôi không thể diễn tả được cảm xúc của mình nữa. Thứ tôi muốn tìm đây rồi, Oh my God!</p>
-<p>Lúc đầu, tôi lập blog này chủ yếu là vì sở thích viết lách một thời. Khi đó, Blogdown (một package trong R, hỗ trợ tạo blog dựa trên nền tảng Hugo) còn chưa xuất hiện. Các bài viết mang nội dung về Programming, Data analytics khá là khó thực hiện, nhất là cái bài viết sử dụng ngôn ngữ R.</p>
+<p>Lúc đầu, tôi lập blog này chủ yếu là vì sở thích viết lách một thời. Khi đó, Blogdown (một package trong R, hỗ trợ tạo blog dựa trên nền tảng Hugo) còn chưa xuất hiện. Các bài viết mang nội dung về Programming, Data analytics khá là khó thực hiện, nhất là các bài viết sử dụng ngôn ngữ R.</p>
 <p>Sau này, đến gần cuối năm 2017, với sự ra đời của Blogdown và xu hướng <em>Reproducible Research</em>. Những nhược điểm trên về cơ bản là đã có phương pháp giải quyết. Và tôi đã xây dựng được một Blog khá là hài lòng. Cho đến khi…Vào một ngày đẹp trời, tôi chuyển đổi laptop, Github được update lại cơ chế, <code>R</code> nâng cấp lên <code>4.0.3</code>, Hugo cũng thay đổi phiên bản. Thế là, một đống lỗi tùm lum xuất hiện.</p>
-<p>Cuối cùng, tôi quyết định, xây dựng lại từ đầu, update mọi thứ lên phiên bản mới nhất. Prj này, tôi ghi lại quá trình mình xây dựng blog này.</p>
+<p>Cuối cùng, tôi quyết định, xây dựng lại từ đầu, update mọi thứ lên phiên bản mới nhất. Trong bài viết này, tôi ghi lại quá trình mình xây dựng blog theo cách đơn giản nhất.</p>
 <div id="chuẩn-bị" class="section level2">
 <h2>1. Chuẩn bị</h2>
 <p>Tôi chia phần chuẩn bị làm 3 loại (Mình sử dụng Windows 10, nên bài này áp dụng với Windows 10, các hệ điều hành khác về cơ bản là tương tự) :</p>

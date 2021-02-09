@@ -1,7 +1,7 @@
 ---
 title: "Vẻ đẹp bình dị giữa đời thường"
 slug: ve-dep-binh-di-giua-doi-thuong
-date: 2021-01-23
+date: 2020-12-08
 categories:
 - My Diary
 tags:

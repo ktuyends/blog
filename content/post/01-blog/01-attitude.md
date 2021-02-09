@@ -1,5 +1,5 @@
 ---
-title: "The Power of Attitude"
+title: "Attitude is everything"
 slug: attitude
 date: 2014-08-19
 categories:

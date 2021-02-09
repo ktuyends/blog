@@ -1,5 +1,5 @@
 ---
-title: "Prj 01: Bắt đầu bằng xây dựng 1 blog"
+title: "Các bước xây dựng một blog"
 slug: prj-01-how-to-start-a-blog
 author: "Tuyen mfe"
 date: 2020-10-28
@@ -19,18 +19,18 @@ output:
     toc: TRUE
 description: "Mini Project"
 summary: >
-   Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,...
+   Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,...Rồi, có một ngày, tôi vô tình đọc được ở đâu đó...
 ---
 
 Blog này, tôi tạo ra cũng khá là lâu, từ những năm 2016. Sau một thời gian dài vi vu qua một số nền tảng như blogspot, wordpress, jekyll,...nhưng tôi không thực sự hài lòng cho lắm với những yêu cầu của mình. 
 
 Rồi, có một ngày, tôi vô tình đọc được ở đâu đó, một bài viết giới thiệu về Hugo. Lúc đó, tôi không thể diễn tả được cảm xúc của mình nữa. Thứ tôi muốn tìm đây rồi, Oh my God!
 
-Lúc đầu, tôi lập blog này chủ yếu là vì sở thích viết lách một thời. Khi đó, Blogdown (một package trong R, hỗ trợ tạo blog dựa trên nền tảng Hugo) còn chưa xuất hiện. Các bài viết mang nội dung về Programming, Data analytics khá là khó thực hiện, nhất là cái bài viết sử dụng ngôn ngữ R.
+Lúc đầu, tôi lập blog này chủ yếu là vì sở thích viết lách một thời. Khi đó, Blogdown (một package trong R, hỗ trợ tạo blog dựa trên nền tảng Hugo) còn chưa xuất hiện. Các bài viết mang nội dung về Programming, Data analytics khá là khó thực hiện, nhất là các bài viết sử dụng ngôn ngữ R.
 
 Sau này, đến gần cuối năm 2017, với sự ra đời của Blogdown và xu hướng *Reproducible Research*. Những nhược điểm trên về cơ bản là đã có phương pháp giải quyết. Và tôi đã xây dựng được một Blog khá là hài lòng. Cho đến khi...Vào một ngày đẹp trời, tôi chuyển đổi laptop, Github được update lại cơ chế, `R` nâng cấp lên `4.0.3`, Hugo cũng thay đổi phiên bản. Thế là, một đống lỗi tùm lum xuất hiện.
 
-Cuối cùng, tôi quyết định, xây dựng lại từ đầu, update mọi thứ lên phiên bản mới nhất. Prj này, tôi ghi lại quá trình mình xây dựng blog này.
+Cuối cùng, tôi quyết định, xây dựng lại từ đầu, update mọi thứ lên phiên bản mới nhất. Trong bài viết này, tôi ghi lại quá trình mình xây dựng blog theo cách đơn giản nhất.
 
 ## 1. Chuẩn bị
 
