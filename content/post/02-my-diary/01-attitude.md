@@ -3,15 +3,15 @@ title: "Attitude is everything"
 slug: attitude
 date: 2014-08-19
 categories:
-- Blog
+- My Diary
 tags:
-- Blog
+- My Diary
 showTags: false
-thumbnailImage: /post/01-blog/attitude.jpg
+thumbnailImage: /post/02-my-diary/attitude.jpg
 thumbnailImagePosition: left
 clearReading: false	
 comments: true
-description: "Blog"
+description: "My Diary"
 summary: >
   Sinh ra kiếp con người ai cũng phải làm việc, giàu hay nghèo cũng phải làm việc, thiếu tiền hay thừa tiền cũng phải làm việc vì đời sống cần có một mục đích mà tiền bạc chỉ là...
 ---

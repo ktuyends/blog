@@ -3,16 +3,16 @@ title: "Install Software in Ubuntu"
 slug: install-software-in-ubuntu
 date: 2016-03-10
 categories:
-- Tutorial
+- Blog
 tags:
-- Tutorial
+- Blog
 showTags: false
 thumbnailImagePosition: "left"
 thumbnailImage: /post/03-tutorial/img/cover/ubuntu-software.png
 clearReading: true
 metaAlignment: center
 comments: true
-description: "Tutorial"
+description: "Blog"
 summary: >
   Trong post này, mình tổng hợp lại một số phần mềm cơ bản nên cài cho Ubuntu và một số phần mềm khác như MySQL, Rstudio, Anaconda để làm việc với Data...
 ---

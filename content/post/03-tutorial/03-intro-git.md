@@ -3,16 +3,16 @@ title: "Introduction to Git"
 slug: intro-to-git
 date: 2016-04-05
 categories:
-- Tutorial
+- Blog
 tags:
-- Tutorial
+- Blog
 showTags: false
 thumbnailImagePosition: "left"
 thumbnailImage: /post/03-tutorial/img/cover/git.png
 clearReading: true
 metaAlignment: center
 comments: true
-description: "Tutorial"
+description: "Blog"
 summary: >
   Version control là một công cụ mạnh mẽ giúp chúng ta theo dõi, quản lý các phiên bản của code, phục hồi khi code bị lỗi,...Trong bài này, tôi viết về Git, một công cụ version control phổ biến nhất. 
 ---

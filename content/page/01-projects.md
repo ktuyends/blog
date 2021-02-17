@@ -1,11 +1,11 @@
 ---
-title: "Mini Projects"
-date: 2018-05-12
+title: "Case Studies"
+date: 2021-02-15
 categories:
-  - Projects
+  - Case Studies
 comments: true
 showMeta: false
-description: "Mini Projects"
+description: "Case Studies"
 ---
 
 {{< blockquote "ARISTOTLE" "The Nicomachean Ethics" >}}

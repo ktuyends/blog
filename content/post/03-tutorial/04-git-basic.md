@@ -3,16 +3,16 @@ title: "Basic Git"
 slug: basic-git
 date: 2016-04-13
 categories:
-- Tutorial
+- Blog
 tags:
-- Tutorial
+- Blog
 showTags: false
 thumbnailImagePosition: "left"
 thumbnailImage: /post/03-tutorial/img/cover/git-basic.png
 clearReading: true
 metaAlignment: center
 comments: true
-description: "Tutorial"
+description: "Blog"
 summary: >
   Với quy trình Gitflow đã trình bày trong bài trước, về cơ bản tôi sẽ chia quá trình học Git làm hai phần. Phần một, cách sử dụng Git để quản lý code ở Local. Phần hai...
 ---

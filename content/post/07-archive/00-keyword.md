@@ -22,20 +22,19 @@ summary: >
 * Minimalists
 
 ---
-* Stargazing
-* Astrology
-* History
-
----
 * WWOOF
+* Stargazing
 * Backpacking
 
 ---
-* Wuxiaworld
 * Taichi
-* Guitar
-* LOL
+* Running
+* Meditation
 
+---
+* LOL
+* Guitar
+* Wuxiaworld
 
 ---
 * E Learning
@@ -45,4 +44,3 @@ summary: >
 * Adobe Lightroom
 
 ---
-

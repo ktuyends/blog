@@ -4,9 +4,9 @@ slug: wsl2-and-r
 author: "Tuyen mfe"
 date: 2020-09-28
 Categories:
-- Tutorial
+- Blog
 Tags:
-- Tutorial
+- Blog
 showTags: false
 thumbnailImagePosition: "left"
 thumbnailImage: /post/03-tutorial/08-wsl2-and-r/wsl2-and-r.jpg
@@ -16,7 +16,7 @@ metaAlignment: center
 output:
   blogdown::html_page:
     toc: TRUE
-description: "Tutorials"
+description: "Blog"
 summary: >
    Lập trình R trong môi trường Windows, đôi khi chúng ta sẽ gặp một số hạn chế mà không được Windows hỗ trợ. Ví dụ như với Parallel Computing thì forking không được hỗ trợ, hay đôi khi...
 ---

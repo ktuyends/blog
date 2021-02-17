@@ -3,16 +3,16 @@ title: "Install Ubuntu Desktop"
 slug: install-ubuntu-desktop
 date: 2016-03-08
 categories:
-- Tutorial
+- Blog
 tags:
-- Tutorial
+- Blog
 showTags: false
 thumbnailImagePosition: "left"
 thumbnailImage: /post/03-tutorial/img/cover/ubuntu.png
 clearReading: true
 metaAlignment: center
 comments: true
-description: "Tutorial"
+description: "Blog"
 summary: >
   Nếu một ngày nào đó, bạn phải làm một công việc mà không được hỗ trợ bởi Windows, bạn sẽ làm gì? Dĩ nhiên là tìm một hệ điều hành khác thay thế cho Windows rồi...
 ---

@@ -3,16 +3,16 @@ title: "Chuyển mã Unicode trong R"
 slug: string-escape-unicode
 date: 2020-08-23
 categories:
-- Tutorial
+- Blog
 tags:
-- Tutorial
+- Blog
 showTags: false
 thumbnailImagePosition: "left"
 thumbnailImage: /post/03-tutorial/img/cover/encoding.jpg
 clearReading: true
 metaAlignment: center	
 comments: true
-description: "Tutorials"
+description: "Blog"
 summary: >
   Với những người lập trình R trên môi trường Windows, một trong những nhược điểm thường gặp là lỗi hiển thị Tiếng Việt. Có hai cách để giải quyết vấn đề này...
 ---

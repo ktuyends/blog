@@ -3,9 +3,9 @@ title: "Hạnh phúc giản đơn"
 slug: happy-simple
 date: 2015-05-12
 categories:
-- Blog
+- My Diary
 tags:
-- Blog
+- My Diary
 showTags: false
 thumbnailImage: /post/02-my-diary/happy-simple.jpg
 thumbnailImagePosition: left

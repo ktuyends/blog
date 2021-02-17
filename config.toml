@@ -30,8 +30,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 
 [author]
   name = "Kiều Tuyến"
-  bio = "Sometimes I Write Crap"
-  job = "Business Analytic"
+  bio = "*Writing is thinking, writing is doing…*"
+  job = "Data Analysis"
   location = "Hanoi, Vietnam"
   gravatarEmail = "ktuyen.ds@gmail.com"
 
@@ -55,31 +55,30 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
   url = "/categories/my-diary/"  
 [[menu.main]]
   weight = 1
-  identifier = "blog"
-  name = "Blog"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-coffee\"></i>"
-  url = "/categories/blog/"
-
+  identifier = "home"
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+  url = "/"
 	
 # Menu bai viet 
 [[menu.links]]
   weight = 0
+  identifier = "knowledge"
+  name = "Knowledge"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa fa-book\"></i>"
+  url = "/categories/knowledge/"
+[[menu.links]]
+  weight = 1
+  identifier = "blog"
+  name = "Blog"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-coffee\"></i>"
+  url = "/categories/blog/"
+[[menu.links]]
+  weight = 2
   identifier = "projects"
   name = "Projects"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bar-chart\"></i>"
   url = "/page/01-projects/"
-[[menu.links]]
-  weight = 1
-  identifier = "tutorial"
-  name = "Tutorials"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa fa-book\"></i>"
-  url = "/categories/tutorial/"
-[[menu.links]]
-  weight = 2
-  identifier = "knowledge"
-  name = "Knowledge"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-reddit-alien\"></i>"
-  url = "/categories/knowledge/"
   
 # Mang xa hoi
 [[menu.misc]]
@@ -214,7 +213,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 
   # Customize link of author avatar in sidebar
   [params.sidebar.profile]
-    url = "/"
+    url = "/#about"
 
   # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
   [params.footer]
