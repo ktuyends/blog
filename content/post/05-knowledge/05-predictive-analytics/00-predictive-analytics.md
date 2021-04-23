@@ -13,8 +13,12 @@ clearReading: false
 comments: true
 description: "Predictive Analytics"
 summary: >
-  I'm writing...
+  Predictive analytics là một trong bốn phương pháp phân tích dữ liệu cơ bản, được sử dụng để đưa ra dự đoán về các sự kiện chưa biết trong tương lai. Predictive analytics sử dụng nhiều kỹ thuật...
 ---
+
+![](/post/05-knowledge/02-data-analyst/img/cover/overview-of-analytics-types.jpg)
+
+Predictive analytics là một trong bốn phương pháp phân tích dữ liệu cơ bản, được sử dụng để đưa ra dự đoán về các sự kiện chưa biết trong tương lai. Predictive analytics sử dụng nhiều kỹ thuật đến từ data mining, statistics, machine learning,...
 
 
 ---

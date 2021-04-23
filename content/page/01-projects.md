@@ -12,17 +12,6 @@ description: "Case Studies"
 “For the things we have to learn before we can do them, we learn by doing them”
 {{< /blockquote >}}  
 
-Với những thứ chúng ta cần phải học trước khi làm, cách đơn giản nhất là hãy thực hành. Tôi cũng không biết mình đặt tên cho Page này là "Mini Project" có đúng hay không nữa. Đây là nơi tôi áp dụng các kiến thức mình học được vào làm một thứ gì đó. Có thể là viết một quyển sách nho nhỏ, hoặc phân tích một tập dữ liệu...
-
-***My Ebooks:***
-
----
-***Business Intelligence:***
-
----
-***Business Analytics:***
-
----
-***Financial Analytics:***
+Thực hành là cách tốt nhất để nắm giữ những kiến thức được học, để nâng cao các kỹ năng lập trình, phân tích và giải quyết các vấn đề. Chỉ có thực hành, chúng ta mới biết được đi từ kiến thức vào thực tế có những khó khăn gì. Page này, là nơi tôi lưu lại số mini projects tôi thực hiện trong quá trình học tập và làm việc của mình.
 
 ---
